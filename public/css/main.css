@@ -1,0 +1,451 @@
+/* Reset de márgenes y bordes para asegurar consistencia en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Fondo con gradiente fosforescente */
+  body {
+    background: linear-gradient(135deg, #785685, #8e44ad, #2ecc71);
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Animación de gradiente para el fondo */
+  @keyframes gradientAnimation {
+    0% { background-position: 100% 0%; }
+    50% { background-position: 0% 100%; }
+    100% { background-position: 100% 0%; }
+  }
+  
+  /* Navbar (barra de navegación) */
+/* Navbar (barra de navegación) */
+nav {
+    transition: top 0.5s ease-in-out;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #9b59b6;
+}
+
+.hidden-nav {
+  top: -100px; /* Oculta el nav desplazándolo hacia arriba */
+  transition: top 0.5s ease;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #9b59b6;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #9b59b6;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Estilos para el selector de idioma dentro del navbar */
+.nav-lang {
+    display: flex;
+    align-items: center;
+}
+
+.language-dropdown {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Separar un poco del menú */
+}
+
+.language-dropdown:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Hover más sutil */
+}
+
+.language-dropdown:focus {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 1);
+}
+
+/* Opcional: estilizar las opciones dentro del selector */
+.language-dropdown option {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+  
+  
+  /* Sección Hero (principal) */
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+  }
+  
+  .hero-description {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .btn {
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(90deg, #8e44ad, #9b59b6);
+    transform: scale(1.05);
+  }
+  
+  /* Sección Proyectos */
+  .projects{
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 1200px;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #9b59b6;
+  }
+  
+  .project {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .project-title {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #b3b3b3;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .btn-secondary {
+    padding: 10px 20px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #9b59b6;
+  }
+  
+  /* Sección Contacto */
+  .contact {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.9);
+    margin: 50px auto;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border: 2px solid #9b59b6;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  button[type="submit"] {
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background: linear-gradient(90deg, #8e44ad, #9b59b6);
+  }
+  
+  /* Responsivo para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .nav-list {
+      flex-direction: column;
+    }
+  
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-description {
+      font-size: 1.2rem;
+    }
+  
+    .btn {
+      padding: 10px 20px;
+    }
+  }
+  
+@media (max-width: 480px) {
+    .hero-title {
+      font-size: 1.8rem;
+    }
+  
+    .btn {
+      padding: 8px 15px;
+    }
+}
+  
+/* Animación de fade-in */
+.animate-fade-in {
+    opacity: 1 !important;
+    transition: opacity 1s ease-in-out;
+}
+  
+/* Animación de parpadeo para el título */
+@keyframes pulse {
+    0%, 100% {
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 20px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+      text-shadow: 0px 0px 15px rgba(255, 255, 255, 1), 0px 0px 25px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.8; /* Espaciado entre líneas para mejorar la legibilidad */
+    color: #ddd; /* Color gris claro para contrastar con el fondo oscuro */
+    margin-bottom: 1.5rem; /* Espaciado entre párrafos */
+    max-width: 95%; /* Para que no ocupen todo el ancho de la pantalla */
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: center; /* Justificación del texto para un look más profesional */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición para color y efecto de hover */
+  }
+  
+  /* Efecto de hover para los párrafos */
+  p:hover {
+    color: #9b59b6; /* Morado fosforescente al pasar el mouse */
+    transform: scale(1.05); /* Aumento sutil del tamaño para mejorar la interacción */
+    text-shadow: 0px 0px 10px rgba(155, 89, 182, 0.6); /* Sombra morada suave para dar énfasis */
+  }
+  
+  /* Estilo para párrafos dentro de las secciones */
+  section p {
+    font-size: 1rem; /* Tamaño de texto ligeramente más pequeño para no sobrecargar visualmente */
+    color: #bbb; /* Gris más oscuro para los párrafos dentro de las secciones */
+    margin-top: 0.5rem; /* Espaciado superior para separar un poco del título */
+  }
+
+  /* Párrafos en la sección de contacto */
+#contact p {
+    font-size: 1.125rem;
+    color: #eee; /* Color más claro para contrastar con el fondo oscuro de contacto */
+    text-align: center; /* Centrado del texto */
+    margin: 0 auto; /* Centrado de los elementos en el formulario */
+    max-width: 600px; /* Limitar el ancho del texto en formularios */
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+svg {
+  width: 1.5rem; /* Ajusta el ancho del ícono */
+  height: 1.5rem; /* Ajusta la altura del ícono */
+  fill: #ffffff; /* Cambia el color del ícono */
+  margin-right: 5px; /* Añade espacio entre el ícono y el texto */
+}
+
+p {
+  text-align: justify; /* Justifica el texto */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+}
+
+/* XP */
+/* Contenedor de la Sección de Experiencia */
+.xp {
+  padding: 50px 20px; /* Espaciado interno */
+  background: rgba(0, 0, 0, 0.85); /* Fondo oscuro con un poco de transparencia */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 50px auto; /* Margen automático para centrar */
+  max-width: 1200px; /* Ancho máximo */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+  color: #ffffff; /* Color de texto blanco para mejor legibilidad */
+}
+
+/* Estilo para el título de la sección de experiencia */
+.xp h2 {
+  text-align: center; /* Centrar el texto del título */
+  font-size: 2.5rem; /* Tamaño grande para el título */
+  margin-bottom: 30px; /* Espacio debajo del título */
+  color: #9b59b6; /* Color que coincide con otras secciones */
+}
+
+/* Estilo para el contenedor de cada experiencia */
+.experience-item {
+  margin-bottom: 30px; /* Espacio entre cada elemento de experiencia */
+  padding: 20px; /* Espaciado interno para cada experiencia */
+  background: rgba(255, 255, 255, 0.1); /* Fondo ligeramente diferente para destacar */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para resaltar */
+  text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para el rol y la empresa */
+.experience-item h3 {
+  font-size: 1.75rem; /* Tamaño de fuente para el rol y la empresa */
+  margin-bottom: 10px; /* Espacio debajo del título de rol */
+  color: #fff; /* Color de texto blanco */
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6); /* Sombra del texto */
+}
+
+/* Estilo para la fecha y ubicación */
+.experience-item p {
+  font-size: 1rem; /* Tamaño de fuente para la fecha y ubicación */
+  color: #b3b3b3; /* Color gris para la descripción */
+  margin-bottom: 15px; /* Espacio debajo de la descripción */
+}
+
+/* Estilo para la lista de habilidades */
+.experience-item ul {
+  list-style-type: none; /* Sin viñetas para la lista de habilidades */
+  padding: 0; /* Sin padding */
+}
+
+.experience-item ul li {
+  font-size: 1rem; /* Tamaño de fuente para las habilidades */
+  color: #8e44ad; /* Color para las habilidades */
+  margin: 5px 0; /* Espacio entre habilidades */
+}
+
+/* Estilo para la imagen de experiencia */
+.experience-image {
+  max-width: 20%; /* Para que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantener la relación de aspecto */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+/* Adaptaciones para móviles */
+@media (max-width: 768px) {
+  .experience-image {
+      max-width: 90%; /* Ajustar el ancho en pantallas más pequeñas */
+  }
+}
+
+
+
+  
+  

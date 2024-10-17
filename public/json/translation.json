@@ -1,0 +1,152 @@
+{
+	"es": {
+		"menu": ["Inicio", "Repos", "Mi experiencia", "Contacto"],
+		"home": {
+			"title": "DEVLII - Leandro Maureira",
+			"description": "Hola, me encuentro finalizando Ingeniería Civil Informática en la Pontificia Universidad Católica de Valparaíso,\n tengo 24 años y actualmente me desenvuelvo en el desarrollo de RPAs, tanto atendidos (a través de suites webs locales) como no atendidos, manejo conceptos de webscrapping con este fin y principalmente programo en python. Pero también manejo otras ramas, como este sitio web.",
+			"button": "Explora mis proyectos y propuestas"
+		},
+		"projects": {
+			"title": "Proyectos Y Repos",
+			"list": [
+				{
+					"title": "Este Portfolio Web",
+					"description": "Una forma más dinámica de presentarme, iniciamos con este portfolio para que me vayas conociendo.\nDesplegado principalmente en sobre Svelte y npm(Node) con FastApi Uvicorn para el backend y hosteado a través de GCP.",
+					"linktext": "Revisa el frontend de este portfolio",
+					"link": ""
+				},
+				{
+					"title": "Módulos de Utilidad | Helpers",
+					"description": "He desarrollado una colección de módulos de utilidades personalizados que me permiten optimizar y automatizar diversas tareas repetitivas en proyectos de desarrollo y RPA. Estos módulos abarcan varias funcionalidades clave, que me han permitido mejorar la eficiencia en proyectos relacionados con Selenium, bases de datos, y OAuth para el envío de correos electrónicos. Si gustas, puedo compartirte alguno de ellos que te pueden ser útiles.",
+					"linktext": "Ver en Github",
+					"link": "https://github.com/LiamhMR/AutoHelpers"
+				},
+				{
+					"title": "Eliminación Gaussiana para realizar análisis nodal de un circuito",
+					"description": "Método de nodos para análisis de circuitos y uso de eliminación Gaussiana para resolver el sistema de ecuaciones. Realizado en Python.",
+					"linktext": "Ver en Github",
+					"link": "https://github.com/LiamhMR/NodalAnalaysisAndGauss"
+				},
+				{
+					"title": "Lenguaje Básico en ANTLR",
+					"description": "Este lenguaje de programación sencillo ha sido realizado como proyecto para la asignatura de Automatas y compiladores, escuela de Informática PUCV. Se incluye el contenido del proyecto ANTLR, Analizador sintáctico Lexer y Parser con su respectivo target.",
+					"linktext": "Ver en Github",
+					"link": "https://github.com/LiamhMR/AutomataLenguaje"
+				}
+			]
+		},
+		"experience": {
+			"title": "Experiencia",
+			"list": [
+				{
+					"role": "Desarrollador Freelance",
+					"company": "Freelance (Autónomo)",
+					"date": "Mayo 2024 - Presente",
+					"location": "Chile · Remoto",
+					"description": "Desarrollador independiente especializado en automatización y optimización de procesos utilizando Python y RPA. Implementé un orquestador de bots propio, automatizando flujos de trabajo como el envío de liquidaciones, la extracción de datos y la gestión financiera a través de dashboards web.",
+					"skills": ["Python (Selenium, Webdriver, Requests, Waitress)", "HTML5", "JavaScript"],
+					"img": "./img/devlii.png"
+				},
+				{
+					"role": "Práctica Profesional",
+					"company": "Ingeniería y Montaje Ferrovial S.A.",
+					"date": "Enero 2024 - Marzo 2024",
+					"location": "Lampa, Santiago Metropolitan Region, Chile · Híbrido",
+					"description": "Desarrollo e implementación de un RPA para automatización y optimización del proceso de solicitud de permisos al MOP, capturando datos internos de la empresa. Se utilizó web scraping para manejar formularios y se optimizó el flujo del proceso con un temporizador interno.",
+					"skills": ["Python", "Selenium WebDriver"],
+					"img": "./img/ferrovial.png"
+				},
+				{
+					"role": "Práctica Profesional",
+					"company": "Dirección de Obras Portuarias - MOP",
+					"date": "Enero 2022 - Marzo 2022",
+					"location": "Santiago Metropolitan Region, Chile · Presencial",
+					"description": "Desarrollo de un software para gestionar el inventario del departamento de informática de la Dirección de Obras Portuarias, migrando datos desde archivos y adaptado a las actividades del área. El objetivo fue agilizar el proceso de manejo de inventario, facilitando la búsqueda de información y la creación de informes.",
+					"skills": ["Visual Basic .NET (VB.NET)", "Microsoft Access", "Microsoft Excel"],
+					"img": "./img/dopmop.jpg"
+				}
+			]
+		},
+		"contact": {
+			"title": "¿Alguna duda?",
+			"email_label": "Correo Electrónico:",
+			"message_label": "Mensaje:",
+			"submit_button": "Enviar"
+		}
+	},
+	"en": {
+		"menu": ["Home", "Projects", "Experience", "Contact"],
+		"home": {
+			"title": "DEVLII - Leandro Maureira",
+			"description": "Hi, I am currently finishing my degree in Civil Informatics Engineering at Pontificia Universidad Católica de Valparaíso.\n currenly im 24yo, and I specialize in developing RPAs, both attended (via local web suites) and unattended. I handle web scraping concepts for these purposes, and I mainly program in Python. However, I also work in other fields, like this website.",
+			"button": "Explore my projects and proposals"
+		},
+		"projects": {
+			"title": "Projects and Repos",
+			"list": [
+				{
+					"title": "This Web Portfolio",
+					"description": "A more dynamic way to introduce myself. I started with this portfolio so you can get to know me better.\nDeployed primarily on Svelte and Node with FastAPI Uvicorn for the backend and hosted through GCP.",
+					"linktext": "Check out the frontend of this portfolio",
+					"link": ""
+				},
+				{
+					"title": "Utility Modules | Helpers (Python)",
+					"description": "I have developed a collection of custom utility modules that allow me to optimize and automate various repetitive tasks in development and RPA projects. These modules cover key functionalities that have enhanced efficiency in projects related to Selenium, databases, and OAuth for sending emails. If you’re interested, I can share some of them with you that may be useful.",
+					"linktext": "View on GitHub",
+					"link": "https://github.com/LiamhMR/AutoHelpers"
+				},
+				{
+					"title": "Gaussian Elimination for Nodal Analysis of a Circuit (Python)",
+					"description": "Nodal method for circuit analysis and the use of Gaussian Elimination to solve the system of equations. Implemented in Python.",
+					"linktext": "View on Github",
+					"link": "https://github.com/LiamhMR/NodalAnalaysisAndGauss"
+				},
+				{
+					"title": "Basic Language in ANTLR",
+					"description": "This simple programming language was created as a project for the Automata and Compilers course at PUCV's School of Informatics. It includes the ANTLR project content, a Lexer and Parser syntax analyzer with its respective target.",
+					"linktext": "View on GitHub",
+					"link": "https://github.com/LiamhMR/AutomataLenguaje"
+				}
+			]
+		},
+		"experience": {
+			"title": "Experience",
+			"list": [
+				{
+					"role": "Freelance Developer",
+					"company": "Freelance (Self-employed)",
+					"date": "May 2024 - Present",
+					"location": "Chile · Remote",
+					"description": "Independent developer specializing in process automation and optimization using Python and RPA. I implemented a custom bot orchestrator, automating workflows like payroll submissions, data extraction, and financial management through web dashboards.",
+					"skills": ["Python (Selenium, Webdriver, Requests, Waitress)", "HTML5", "JavaScript"],
+					"img": "./img/devlii.png"
+				},
+				{
+					"role": "Software Developer Internship",
+					"company": "Ingeniería y Montaje Ferrovial S.A.",
+					"date": "January 2024 - March 2024",
+					"location": "Lampa, Santiago Metropolitan Region, Chile · Hybrid",
+					"description": "Developed and implemented an RPA to automate and optimize the process of applying for permits at MOP, capturing internal company data. Web scraping was used to manage forms, and the process flow was optimized with an internal timer.",
+					"skills": ["Python", "Selenium WebDriver"],
+					"img": "./img/ferrovial.png"
+				},
+				{
+					"role": "Software Developer Internship",
+					"company": "Dirección de Obras Portuarias - MOP",
+					"date": "January 2022 - March 2022",
+					"location": "Santiago Metropolitan Region, Chile · On-site",
+					"description": "Developed software to manage the inventory of the IT department at the Dirección de Obras Portuarias, migrating data from files and adapting to the department's activities. The goal was to streamline the inventory management process, making it easier to find information and generate reports.",
+					"skills": ["Visual Basic .NET (VB.NET)", "Microsoft Access", "Microsoft Excel"],
+					"img": "./img/dopmop.jpg"
+				}
+			]
+		},
+		"contact": {
+			"title": "Any questions?",
+			"email_label": "Email:",
+			"message_label": "Message:",
+			"submit_button": "Send"
+		}
+	}
+}

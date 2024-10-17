@@ -1,0 +1,540 @@
+/* Reset de márgenes y bordes para asegurar consistencia en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fondo con gradiente fosforescente */
+body {
+    background: linear-gradient(135deg, #785685, #8e44ad, #2ecc71);
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite;
+    color: white;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Animación de gradiente para el fondo */
+@keyframes gradientAnimation {
+    0% { background-position: 100% 0%; }
+    50% { background-position: 0% 100%; }
+    100% { background-position: 100% 0%; }
+}
+
+/* Navbar (barra de navegación) */
+nav {
+    transition: top 0.5s ease;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #9b59b6;
+}
+
+.hidden-nav {
+    top: -100px; /* Oculta el nav desplazándolo hacia arriba */
+    transition: top 0.5s ease;
+  }
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #9b59b6;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #9b59b6;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Estilos para el selector de idioma dentro del navbar */
+.nav-lang {
+    display: flex;
+    align-items: center;
+}
+
+.language-dropdown {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Separar un poco del menú */
+}
+
+.language-dropdown:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Hover más sutil */
+}
+
+.language-dropdown:focus {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 1);
+}
+
+/* Opcional: estilizar las opciones dentro del selector */
+.language-dropdown option {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+/* Estilos para el menú en móviles */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Ocultamos el menú en móviles por defecto */
+        list-style: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Mostrar el menú solo cuando esté activado */
+    .nav-list.show {
+        display: flex; /* Mostramos el menú cuando se activa la clase 'show' */
+    }
+
+    /* Menu toggle icon (hamburguesa) */
+    .menu-toggle {
+        display: block; /* Mostrar el ícono de menú */
+        cursor: pointer;
+        padding: 3%;
+        z-index: 10; /* Asegura que el ícono se muestre sobre el menú */
+    }
+
+    .menu-icon::before {
+        content: "\2630"; /* Icono hamburguesa */
+        font-size: 24px;
+        color: white;
+    }
+
+    /* Enlaces en el móvil */
+    .nav-link {
+        padding: 15px 0;
+        font-size: 18px;
+    }
+
+    /* Estilizar el selector de idioma */
+    .language-dropdown {
+        margin: 10px auto; /* Centrado del selector */
+    }
+}
+
+.nav-list {
+    display: none; /* Ocultar por defecto */
+    z-index: 9999; 
+}
+
+
+
+/* Sección Hero (principal) */
+.hero {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+}
+
+.hero-description {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #8e44ad, #9b59b6);
+    transform: scale(1.05);
+}
+
+/* Sección Proyectos */
+.projects{
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #9b59b6;
+}
+
+.project{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-description{
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin-bottom: 10px;
+}
+
+.btn-secondary {
+    padding: 8px 15px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #9b59b6;
+}
+
+/* Sección Contacto */
+.contact {
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.9);
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border: 2px solid #9b59b6;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #8e44ad, #9b59b6);
+}
+
+/* Media queries ajustados para móviles */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .projects {
+        max-width: 90%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+
+    .form-label {
+        font-size: 1rem;
+    }
+
+    .form-input {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .project-title {
+        font-size: 1.15rem;
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+    }
+
+    .form-input {
+        font-size: 0.85rem;
+    }
+
+    textarea {
+        height: 100px;
+    }
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+svg {
+    width: 1.5rem; /* Ajusta el ancho del ícono */
+    height: 1.5rem; /* Ajusta la altura del ícono */
+    fill: #ffffff; /* Cambia el color del ícono */
+    margin-right: 5px; /* Añade espacio entre el ícono y el texto */
+}
+
+p {
+    text-align: justify; /* Justifica el texto */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* XP */
+/* Contenedor de la Sección de Experiencia */
+.xp {
+    padding: 50px 20px; /* Espaciado interno */
+    background: rgba(0, 0, 0, 0.85); /* Fondo oscuro con un poco de transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 50px auto; /* Margen automático para centrar */
+    max-width: 1200px; /* Ancho máximo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    color: #ffffff; /* Color de texto blanco para mejor legibilidad */
+}
+
+/* Estilo para el título de la sección de experiencia */
+.xp h2 {
+    text-align: center; /* Centrar el texto del título */
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    color: #9b59b6; /* Color que coincide con otras secciones */
+}
+
+/* Estilo para el contenedor de cada experiencia */
+.experience-item {
+    margin-bottom: 30px; /* Espacio entre cada elemento de experiencia */
+    padding: 20px; /* Espaciado interno para cada experiencia */
+    background: rgba(255, 255, 255, 0.1); /* Fondo ligeramente diferente para destacar */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para resaltar */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para el rol y la empresa */
+.experience-item h3 {
+    font-size: 1.75rem; /* Tamaño de fuente para el rol y la empresa */
+    margin-bottom: 10px; /* Espacio debajo del título de rol */
+    color: #fff; /* Color de texto blanco */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6); /* Sombra del texto */
+}
+
+/* Estilo para la fecha y ubicación */
+.experience-item p {
+    font-size: 1rem; /* Tamaño de fuente para la fecha y ubicación */
+    color: #b3b3b3; /* Color gris para la descripción */
+    margin-bottom: 15px; /* Espacio debajo de la descripción */
+}
+
+/* Estilo para la lista de habilidades */
+.experience-item ul {
+    list-style-type: none; /* Sin viñetas para la lista de habilidades */
+    padding: 0; /* Sin padding */
+}
+
+.experience-item ul li {
+    font-size: 1rem; /* Tamaño de fuente para las habilidades */
+    color: #8e44ad; /* Color para las habilidades */
+    margin: 5px 0; /* Espacio entre habilidades */
+}
+
+/* Adaptaciones para móviles */
+@media (max-width: 768px) {
+    .xp {
+        padding: 30px 10px; /* Reduce el espaciado interno */
+        margin: 30px auto; /* Reduce el margen */
+    }
+
+    .xp h2 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+        margin-bottom: 20px; /* Reduce el margen debajo del título */
+    }
+
+    .experience-item {
+        padding: 15px; /* Reduce el espaciado interno en los elementos de experiencia */
+        margin-bottom: 20px; /* Reduce el espacio entre elementos de experiencia */
+    }
+
+    .experience-item h3 {
+        font-size: 1.5rem; /* Reduce el tamaño de fuente para el rol y la empresa */
+        margin-bottom: 8px; /* Reduce el margen debajo del título de rol */
+    }
+
+    .experience-item p {
+        font-size: 0.9rem; /* Reduce el tamaño de fuente para la fecha y ubicación */
+        margin-bottom: 10px; /* Reduce el margen debajo de la descripción */
+    }
+
+    .experience-item ul li {
+        font-size: 0.9rem; /* Reduce el tamaño de fuente para las habilidades */
+    }
+
+    .experience-image {
+        max-width: 20%; /* Ajusta el tamaño de la imagen para móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .xp {
+        padding: 20px 5px; /* Aumenta la reducción del espaciado interno */
+        margin: 20px auto; /* Aumenta la reducción del margen */
+    }
+
+    .xp h2 {
+        font-size: 1.75rem; /* Reduce aún más el tamaño del título */
+    }
+
+    .experience-item h3 {
+        font-size: 1.3rem; /* Reduce aún más el tamaño de fuente para el rol y la empresa */
+    }
+
+    .experience-item p,
+    .experience-item ul li {
+        font-size: 0.85rem; /* Reduce aún más el tamaño de fuente para la descripción y habilidades */
+    }
+
+    .experience-image {
+        max-width: 30%; /* Asegúrate de que la imagen ocupe el ancho completo en pantallas pequeñas */
+    }
+}
+
+  
